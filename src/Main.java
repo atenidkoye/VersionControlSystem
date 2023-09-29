@@ -4,14 +4,25 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String Name = "";
         String Ans = "";
-        System.out.println("please, guess my name");
-        if(Name.equals(Ans)){
-            System.out.println("congratulations!");
-        }
-        else if (Ans.equals("n")){
-            System.out.println("Do you want to quit? (y/n)");
-        }
+        int Tries = 0;
+        while (true) {
+            Tries++;
+            Ans = in.nextLine();
+            System.out.println("please, guess my name");
+            if (Name.equals(Ans)) {
+                System.out.println("congratulations!");
+                break;
+            } else if (Ans.equals("n")) {
+                System.out.println("thank you for playing");
+                continue;
 
-        System.out.println("Hello world!");
+            } else if (Ans.equals("y")) {
+                System.out.println("thank you for playing");
+                break;
+
+            }
+
+        }
+//        System.out.println("Hello world!");
     }
 }
